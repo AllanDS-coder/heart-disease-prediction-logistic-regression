@@ -255,7 +255,7 @@ Potential areas for further development include:
 
 ## 12. Author
 
-**Allan Onyango**
+DS-Coder
 
 Data Science | Machine Learning | Artificial Intelligence
 
