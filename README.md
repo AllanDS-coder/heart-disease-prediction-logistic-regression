@@ -1,0 +1,269 @@
+# CardioLens: Heart Disease Prediction Using Logistic Regression
+
+
+
+
+## Application Preview
+
+CardioLens is deployed as an interactive Streamlit application.
+
+**Live application:** [Launch CardioLens](https://heart-disease-prediction-logistic-binaryclassification.streamlit.app/)
+
+### Application Interface
+
+![CardioLens application homepage](<img width="1486" height="571" alt="image" src="https://github.com/user-attachments/assets/97fe7bb9-403f-4609-9729-9bb324791b89" />
+)
+
+### Patient Information Input
+
+![CardioLens patient input form](<img width="1167" height="906" alt="image" src="https://github.com/user-attachments/assets/72e50754-8b89-454d-af23-af317a5cc8bd" />
+)
+
+### Prediction Results
+
+![CardioLens prediction results](<img width="1324" height="639" alt="image" src="https://github.com/user-attachments/assets/1be90fdc-a1bc-423e-bf70-b3548de24b66" />
+)
+
+
+### An End-to-End Machine Learning Application
+
+## 1. Project Overview
+
+CardioLens is a machine learning web application developed to demonstrate how health-related data can be used to estimate the likelihood of heart disease.
+
+The project applies Logistic Regression, a supervised machine learning classification algorithm, to a heart disease dataset. The trained model is integrated into an interactive web application built with Streamlit.
+
+Users can enter selected health measurements and other characteristics to receive a model-generated prediction and estimated probability of heart disease.
+
+**Project type:** Binary Classification  
+**Machine Learning Algorithm:** Logistic Regression  
+**Application Framework:** Streamlit  
+**Programming Language:** Python
+
+## 2. Project Objectives
+
+The main objectives are to:
+
+- Develop a supervised machine learning classification model.
+- Apply appropriate preprocessing techniques to numerical and categorical variables.
+- Build a reproducible machine learning pipeline.
+- Train and evaluate a Logistic Regression classifier.
+- Integrate the trained model into an interactive web application.
+- Demonstrate an end-to-end application of data science in healthcare.
+
+## 3. Dataset Description
+
+The project uses the Heart Disease dataset available on Kaggle.
+
+**Dataset source:** [Heart Disease Dataset – Kaggle](https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data)
+
+The dataset contains patient-related characteristics and clinical measurements, including:
+
+| Feature | Description |
+|---|---|
+| Age | Patient's age |
+| Sex | Patient's sex |
+| Chest pain type | Type of chest pain |
+| Resting blood pressure | Blood pressure at rest |
+| Cholesterol | Serum cholesterol level |
+| Fasting blood sugar | Fasting blood sugar indicator |
+| Resting ECG | Resting electrocardiographic results |
+| Maximum heart rate | Maximum heart rate achieved |
+| Exercise-induced angina | Whether exercise induced angina |
+| Oldpeak | ST depression induced by exercise |
+| Slope | Slope of the peak exercise ST segment |
+
+### Target Variable
+
+The original target variable, `num`, was transformed into a binary classification target:
+
+- **0:** No heart disease indicated in the dataset.
+- **1:** Presence of heart disease indicated in the dataset.
+
+The binary target was created by grouping all positive disease values together.
+
+## 4. Machine Learning Methodology
+
+The project follows a structured machine learning workflow.
+
+1. Data loading and inspection.
+2. Data cleaning and preprocessing.
+3. Exploratory data analysis.
+4. Feature selection.
+5. Target variable transformation.
+6. Train-test splitting using stratified sampling.
+7. Construction of a preprocessing and modelling pipeline.
+8. Logistic Regression model training.
+9. Model evaluation.
+10. Model integration and application development.
+
+### Data Preprocessing
+
+The selected features are divided into numerical and categorical variables.
+
+**Numerical features:**
+- Age
+- Resting blood pressure
+- Cholesterol
+- Maximum heart rate
+- Oldpeak
+
+**Categorical features:**
+- Sex
+- Chest pain type
+- Fasting blood sugar
+- Resting ECG
+- Exercise-induced angina
+- Slope
+
+The preprocessing pipeline applies:
+
+- Median imputation for missing numerical values.
+- Standardisation using StandardScaler.
+- Most-frequent imputation for missing categorical values.
+- One-hot encoding for categorical variables.
+
+### Model Development
+
+Logistic Regression was selected as the classification algorithm.
+
+The preprocessing operations and classifier are integrated into a Scikit-learn Pipeline to ensure that the same transformations are applied consistently during model training and prediction.
+
+The dataset was divided into training and testing subsets using a 70:30 split, with stratification to preserve the target class distribution.
+
+## 5. Technologies and Tools
+
+| Technology | Application |
+|---|---|
+| Python | Main programming language |
+| Pandas | Data manipulation |
+| Scikit-learn | Preprocessing, model training and evaluation |
+| Streamlit | Interactive web application |
+| Joblib | Model persistence |
+| Git | Version control |
+| GitHub | Source code hosting |
+
+## 6. Application Features
+
+CardioLens provides an interactive interface through which users can:
+
+- Enter selected patient characteristics.
+- Provide health-related measurements.
+- Submit information for model prediction.
+- View the predicted classification.
+- View the estimated probability generated by the model.
+- Review the information entered.
+
+The application loads the previously trained machine learning pipeline rather than retraining the model every time a user makes a prediction.
+
+## 7. Project Structure
+
+```text
+heart-disease-prediction-logistic-regression/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── data/
+│   └── heart.csv
+│
+├── image/
+│   └── heart.png
+│
+├── models/
+│   └── heart_disease_model.joblib
+│
+└── src/
+    ├── model.py
+    └── train.py
+```
+
+## 8. Installation and Usage
+
+### Prerequisites
+
+- Python installed on your computer.
+- Git installed.
+- A copy of this repository.
+
+### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/AllanDS-coder/heart-disease-prediction-logistic-regression.git
+```
+
+### Step 2: Navigate into the project directory
+
+```bash
+cd heart-disease-prediction-logistic-regression
+```
+
+### Step 3: Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### Step 4: Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 5: Run the application
+
+```bash
+python -m streamlit run app.py
+```
+
+The application will open in your browser.
+
+## 9. Limitations
+
+- The model's predictions depend on the characteristics and quality of the dataset used during training.
+- The model is limited to the features selected during development.
+- Performance on the test dataset does not guarantee equivalent performance on new populations.
+- The project does not establish clinical validity or demonstrate suitability for medical decision-making.
+
+## 10. Medical Disclaimer
+
+CardioLens is an educational machine learning project developed for data science demonstration and learning purposes.
+
+It is not a clinically validated diagnostic system. Its predictions and estimated probabilities must not be interpreted as medical diagnoses or used to guide treatment decisions.
+
+Users should consult qualified healthcare professionals for medical assessment and advice.
+
+## 11. Future Improvements
+
+Potential areas for further development include:
+
+- Exploring additional classification algorithms.
+- Hyperparameter optimisation and model comparison.
+- More comprehensive model evaluation.
+- Model explainability and feature importance analysis.
+- External validation using independent datasets.
+- Deployment and accessibility improvements.
+- Monitoring model performance and potential data drift.
+
+## 12. Author
+
+**Allan Onyango**
+
+Data Science | Machine Learning | Artificial Intelligence
+
+GitHub: [AllanDS-coder](https://github.com/AllanDS-coder)
+
+---
+
+*CardioLens demonstrates the application of machine learning principles in developing interactive, data-driven healthcare technology.*
+
+
+
