@@ -21,7 +21,8 @@ CardioLens is deployed as an interactive Streamlit application.
 
 ### Prediction Results
 
-![CardioLens prediction results]()
+![CardioLens prediction results](<img width="1324" height="639" alt="image" src="https://github.com/user-attachments/assets/1be90fdc-a1bc-423e-bf70-b3548de24b66" />
+)
 
 
 ### An End-to-End Machine Learning Application
@@ -263,4 +264,5 @@ GitHub: [AllanDS-coder](https://github.com/AllanDS-coder)
 ---
 
 *CardioLens demonstrates the application of machine learning principles in developing interactive, data-driven healthcare technology.*
+
 
