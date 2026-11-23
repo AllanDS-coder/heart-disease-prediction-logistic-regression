@@ -255,7 +255,6 @@ Potential areas for further development include:
 
 ## 12. Author
 
-**Allan Onyango**
 
 Data Science | Machine Learning | Artificial Intelligence
 
@@ -264,5 +263,6 @@ GitHub: [AllanDS-coder](https://github.com/AllanDS-coder)
 ---
 
 *CardioLens demonstrates the application of machine learning principles in developing interactive, data-driven healthcare technology.*
+
 
 
