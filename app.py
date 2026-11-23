@@ -505,7 +505,7 @@ if "cardiolens_result" in st.session_state:
 
     st.caption(
         "This represents the model's estimated probability "
-        "of the positive class in its training dataset. "
+        "of the positive class. "
         "It is not a validated estimate of personal medical risk."
     )
 
@@ -518,7 +518,7 @@ if "cardiolens_result" in st.session_state:
         st.info(
             "**The model returned a positive classification.**\n\n"
             "The model placed this set of inputs in the positive "
-            "category used in its training dataset."
+            "category."
         )
 
     else:
@@ -526,7 +526,7 @@ if "cardiolens_result" in st.session_state:
         st.info(
             "**The model returned a negative classification.**\n\n"
             "The model placed this set of inputs in the negative "
-            "category used in its training dataset."
+            "category."
         )
 
     # --------------------------------------------------------
@@ -626,3 +626,4 @@ st.warning(
 st.caption(
     "CardioLens · Educational demonstration · Built with Python."
 )
+
