@@ -1,5 +1,29 @@
 # CardioLens: Heart Disease Prediction Using Logistic Regression
 
+
+
+
+## Application Preview
+
+CardioLens is deployed as an interactive Streamlit application.
+
+**Live application:** [Launch CardioLens](https://heart-disease-prediction-logistic-binaryclassification.streamlit.app/)
+
+### Application Interface
+
+![CardioLens application homepage](<img width="1486" height="571" alt="image" src="https://github.com/user-attachments/assets/97fe7bb9-403f-4609-9729-9bb324791b89" />
+)
+
+### Patient Information Input
+
+![CardioLens patient input form](<img width="1167" height="906" alt="image" src="https://github.com/user-attachments/assets/72e50754-8b89-454d-af23-af317a5cc8bd" />
+)
+
+### Prediction Results
+
+![CardioLens prediction results]()
+
+
 ### An End-to-End Machine Learning Application
 
 ## 1. Project Overview
@@ -239,3 +263,4 @@ GitHub: [AllanDS-coder](https://github.com/AllanDS-coder)
 ---
 
 *CardioLens demonstrates the application of machine learning principles in developing interactive, data-driven healthcare technology.*
+
